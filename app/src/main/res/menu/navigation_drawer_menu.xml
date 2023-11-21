@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/user_group"
+        >
+        <item android:id="@+id/bottom_navigation_home"
+            android:title="Home"
+            android:icon="@drawable/baseline_home_24"
+            android:enabled="true"
+            />
+        <item android:id="@+id/bottom_navigation_profile"
+            android:title="Profile"
+            android:icon="@drawable/baseline_person_outline_24"
+            android:enabled="true"
+            />
+        <item android:id="@+id/bottom_navigation_categories"
+            android:title="Categories"
+            android:icon="@drawable/baseline_category_24"
+            android:enabled="true"
+            />
+        <item android:id="@+id/bottom_navigation_chat"
+            android:title="Connect us"
+            android:icon="@drawable/baseline_chat_24"
+            android:enabled="true"
+            />
+        <item android:id="@+id/bottom_navigation_cart"
+            android:title="My Cart"
+            android:icon="@drawable/baseline_add_shopping_cart_24"
+            android:enabled="true"
+            />
+        <item android:id="@+id/bottom_navigation_orders"
+            android:title="My Oreders"
+            android:icon="@drawable/baseline_shopping_cart_24"
+            android:enabled="true"
+            />
+
+    </group>
+    <group android:id="@+id/admin_group"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/adminOrders"
+            android:title="Orders"
+            android:icon="@drawable/baseline_shopping_cart_24"
+            android:enabled="true"
+            />
+        <item android:id="@+id/bottom_navigation_newProduct"
+            android:title="New Products"
+            android:icon="@drawable/baseline_autorenew_24"
+            android:enabled="true"
+            />
+
+    </group>
+
+
+</menu>

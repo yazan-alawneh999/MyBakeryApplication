@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:padding="@dimen/_5sdp"
+    android:background="@drawable/image_bg"
+    android:elevation="@dimen/_2sdp">
+
+    <ImageView
+        android:id="@+id/cartViewHolderIv"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kaak"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/cartViewHolderLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kaak manar "
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@+id/cartViewHolderCounterLayout"
+        app:layout_constraintEnd_toEndOf="@+id/cartViewHolderCounterLayout"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/cartViewHolderCounterLayout"
+        app:layout_constraintTop_toTopOf="@+id/cartViewHolderIv"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/cartViewHolderItemFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOD 4.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/cartViewHolderLabelTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/cartViewHolderLabelTv"
+        app:layout_constraintTop_toTopOf="@+id/cartViewHolderLabelTv"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cartViewHolderCounterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/cart_viewholder_counter_layout"
+        app:layout_constraintBottom_toBottomOf="@+id/cartViewHolderIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintStart_toEndOf="@+id/cartViewHolderIv"
+        app:layout_constraintTop_toTopOf="@+id/cartViewHolderIv"
+        app:layout_constraintVertical_bias="1">
+
+        <ImageView
+            android:id="@+id/cartViewHolderMinusCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/minus"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintEnd_toStartOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintHeight_percent=".58"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintVertical_bias="0.235" />
+
+        <ImageView
+            android:id="@+id/cartViewHolderWhiteCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cartViewHolderPlusCounter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/plus"
+            app:layout_constraintBottom_toBottomOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintEnd_toEndOf="@+id/cartViewHolderCounterLayout"
+            app:layout_constraintHeight_percent=".99"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintTop_toTopOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintWidth_percent=".16" />
+
+        <TextView
+            android:id="@+id/quantityCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintEnd_toEndOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintStart_toStartOf="@+id/cartViewHolderWhiteCircle"
+            app:layout_constraintTop_toTopOf="@+id/cartViewHolderWhiteCircle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/cartViewHolderTotalFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOD 8.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cartViewHolderCounterLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/cartViewHolderCounterLayout"
+        app:layout_constraintTop_toTopOf="@+id/cartViewHolderCounterLayout"
+        app:layout_constraintVertical_bias=".6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

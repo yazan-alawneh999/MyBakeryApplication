@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layoutDirection="ltr"
+    tools:context=".Activities.SearchActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_tb"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layoutDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24" />
+
+
+    <EditText
+        android:layout_marginStart="@dimen/_3sdp"
+        android:id="@+id/searchActivity_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/search_et_bg"
+        android:drawablePadding="@dimen/_4sdp"
+        android:hint="Search For Faviourit Food"
+        android:padding="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_3sdp"
+        android:paddingVertical="@dimen/_3sdp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_tb"
+        app:layout_constraintWidth_percent=".89"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+    <ImageButton
+        android:id="@+id/searchIB"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@+id/searchActivity_et"
+        app:layout_constraintEnd_toStartOf="@+id/searchActivity_et"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/searchActivity_et"
+        app:layout_constraintTop_toTopOf="@id/searchActivity_et"
+        app:layout_constraintVertical_bias=".6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchActivity_et" />
+</androidx.constraintlayout.widget.ConstraintLayout>

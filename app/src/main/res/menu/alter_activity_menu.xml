@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/done_menu_button"
+        android:icon="@drawable/ok_menu_icon"
+        app:showAsAction="always"
+        android:title="Done"
+        tools:ignore="AlwaysShowAction,HardcodedText" />
+    <item android:id="@+id/delete_product_icon"
+        android:icon="@drawable/delete_menu_icon"
+        app:showAsAction="always"
+        android:title="Delete"/>
+    <item   android:id="@+id/edit_ulter_menu"
+        android:title="edit"
+        android:icon="@drawable/edit_menu_icon"
+        app:showAsAction="always"
+        />
+
+</menu>

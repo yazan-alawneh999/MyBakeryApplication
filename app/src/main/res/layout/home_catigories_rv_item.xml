@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_95sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <LinearLayout
+        android:id="@+id/custom_staticRv_layout_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorAccent"
+
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/custom_staticRv_layout_iv"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/m" />
+
+        <TextView
+            android:id="@+id/custom_staticRv_layout_tv"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center_horizontal"
+            android:text="معمول سميد"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16ssp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/alice"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

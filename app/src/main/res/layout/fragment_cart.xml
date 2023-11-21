@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.CartFragment"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cartEmptyLayout"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/newProductFragmentNoProductIv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_210sdp"
+            android:src="@drawable/your_cart_empty_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/newProductFragmentImageViewNoProductTv"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintVertical_bias="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alice"
+            android:text="your cart is empty"
+            android:textAlignment="center"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newProductFragmentNoProductIv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cartScrollView">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/_2sdp"
+        android:paddingHorizontal="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/cartFragment_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Cart"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartFragmentRv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_260sdp"
+            app:layout_constraintEnd_toEndOf="@id/cartFragment_title_tv"
+            app:layout_constraintStart_toStartOf="@+id/cartFragment_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/cartFragment_title_tv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cartFragmentTotalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/cart_fragment_total_layout_bg"
+            android:elevation="@dimen/_3sdp"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/cartFragmentRv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cartFragmentRv"
+            app:layout_constraintTop_toBottomOf="@+id/cartFragmentRv">
+
+            <TextView
+                android:id="@+id/cartFragmentTotalLayoutTotalItemTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Items Total:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cartFragmentTotalLayoutTotalItemValueTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cartFragmentTotalLayoutTaxTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Tax:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutTotalItemTv"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/cartFragmentTotalLayoutTotalItemTv"
+                app:layout_constraintTop_toBottomOf="@+id/cartFragmentTotalLayoutTotalItemTv" />
+
+            <TextView
+                android:id="@+id/cartFragmentTotalLayoutDeliveryServiceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Delivery Service:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutTaxTv"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/cartFragmentTotalLayoutTaxTv"
+                app:layout_constraintTop_toBottomOf="@+id/cartFragmentTotalLayoutTaxTv" />
+
+            <TextView
+                android:id="@+id/cartFragmentTotalLayoutTotalItemValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOD 0.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cartFragmentTotalLayoutTotalItemTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/cartFragmentTotalLayoutTotalItemTv"
+                app:layout_constraintTop_toTopOf="@+id/cartFragmentTotalLayoutTotalItemTv" />
+
+            <TextView
+                android:id="@+id/cartFragmentTotalLayoutTaxValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOD 0.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cartFragmentTotalLayoutTaxTv"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutTotalItemValueTv"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/cartFragmentTotalLayoutTaxTv"
+                app:layout_constraintTop_toTopOf="@+id/cartFragmentTotalLayoutTaxTv" />
+
+
+            <TextView
+                android:id="@+id/cartFragmentTotalLayoutDeliveryServiceValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOD 0.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cartFragmentTotalLayoutDeliveryServiceTv"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutTaxValueTv"
+                app:layout_constraintTop_toTopOf="@+id/cartFragmentTotalLayoutDeliveryServiceTv"
+                app:layout_constraintVertical_bias="1" />
+
+            <View
+                android:id="@+id/cartFragmentView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:background="#70707070"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutDeliveryServiceValueTv"
+                app:layout_constraintStart_toStartOf="@+id/cartFragmentTotalLayoutDeliveryServiceTv"
+                app:layout_constraintTop_toBottomOf="@+id/cartFragmentTotalLayoutDeliveryServiceTv" />
+
+
+            <TextView
+                android:id="@+id/cartFragmentTotalFeeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Total:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutDeliveryServiceTv"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/cartFragmentTotalLayoutDeliveryServiceTv"
+                app:layout_constraintTop_toBottomOf="@+id/cartFragmentView" />
+
+            <TextView
+                android:id="@+id/cartFragmentTotalFeeValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOD 0.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cartFragmentTotalFeeTv"
+                app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayoutDeliveryServiceValueTv"
+                app:layout_constraintTop_toTopOf="@+id/cartFragmentTotalFeeTv"
+                app:layout_constraintVertical_bias="1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/cartFragmentChickBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cartFragmentTotalLayout"
+            app:layout_constraintStart_toStartOf="@+id/cartFragmentTotalLayout"
+            app:layout_constraintEnd_toEndOf="@+id/cartFragmentTotalLayout"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/cart_fragment_button_bg"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Check Out"
+            android:elevation="@dimen/_2sdp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00000000"
+            android:text="\n\n\n"
+            app:layout_constraintTop_toBottomOf="@+id/cartFragmentChickBtn"
+            app:layout_constraintStart_toStartOf="@+id/cartFragmentChickBtn"
+            app:layout_constraintEnd_toEndOf="@+id/cartFragmentChickBtn"
+            android:layout_marginTop="@dimen/_10sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+</FrameLayout>
